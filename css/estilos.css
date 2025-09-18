@@ -298,9 +298,17 @@ main{
     .topico{
         display: block;
     }
+    .topico img{
+        margin-left:25px;
+    }
+    p{
+        margin:0px;
+        padding: 0px;
+    }
     .content{
-        padding: 1vw;
-        width: 60vw;
+        padding: 0px;
+        margin: 40px;
+        width: 65vw;
         display: block;
 
     }
@@ -309,6 +317,9 @@ main{
         padding: 1vw;
         width: 60vw;
         display: block;
+    }
+    .topico{
+        margin: 0px;
     }
     .topico2{
 
@@ -321,6 +332,13 @@ main{
         max-width: 80vw;
         min-width: 70vw;
     }
+    p{
+        min-width: 70vw;
+        max-width: 90vw;
+        margin:0 auto;
+        padding: 0;
+    }
+    
     .caroussel{
         display: none;
     }
