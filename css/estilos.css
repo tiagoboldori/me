@@ -311,14 +311,15 @@ main{
         display: block;
     }
     .topico2{
-        position: absolute;
-        top:0;
+
         font-size: small;
-        max-width: 25vw;
-        max-height:5vh;
-        align-content:baseline;
-        height: 25vh;
+        max-height:300vh;
         min-height: 25vh;
+        width: 70vw;
+    }
+    .topico2 p {
+        max-width: 80vw;
+        min-width: 70vw;
     }
     .caroussel{
         display: none;
