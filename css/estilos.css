@@ -108,7 +108,6 @@ main{
 .content2{
     margin:50px;
     padding-left: 8vw;
-    padding-right: 8vw;
     display: flex;
 }
 
@@ -126,7 +125,9 @@ main{
 
 .topico2{
     margin-top: 5px;
-    align-content: center;
+    max-height: 10vh;
+    max-width: 25vw;
+    min-width: 25vw;
 }
 .topico{
     margin-top: 5px;
@@ -304,12 +305,20 @@ main{
 
     }
     .content2{
+        position: relative;
         padding: 1vw;
         width: 60vw;
         display: block;
     }
     .topico2{
+        position: absolute;
+        top:0;
         font-size: small;
+        max-width: 25vw;
+        max-height:5vh;
+        align-content:baseline;
+        height: 25vh;
+        min-height: 25vh;
     }
     .caroussel{
         display: none;
