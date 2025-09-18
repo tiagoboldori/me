@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <title>Portfólio</title>
+</head>
+<body>
+    <div class="menu">
+        <button>Menu</button>
+        <ul>
+            <li>
+                <a  onclick="document.getElementById('first').scrollIntoView({inline:'center',behavior:'smooth'})">Sobre mim</a>
+            </li>
+            <li>
+                <a onclick="document.getElementById('projetos').scrollIntoView({inline:'center',behavior:'smooth'})">Projetos</a>
+            </li>
+            <li>
+                <a onclick="document.getElementById('contato').scrollIntoView({inline:'center',behavior:'smooth'})">Contato</a>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <div class="content" id="first">
+            <div id="sobre">
+                <h1>Sobre mim</h1>
+                <div class="topico">
+                    <img alt="foto" id="foto" src="img/download.jpg">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi itaque maiores quisquam? Vitae, assumenda harum, labore nostrum numquam similique ut et optio, quo cum accusamus quas! Natus saepe dolorem commodi!
+                    </p>
+                </div>
+                <h1>Principais tecnologias</h1>
+                <div class="caroussel">
+                    <button class="left-button control">◀</button>
+                    <button class="right-button control">▶</button>
+                    <div class="wrapper">
+                        <div class="gallery">        
+                            <img src="" class="item">                
+                            <img src="img/django.png" class="item current-item">
+                            <img src="img/python.png" class="item">
+                            <img src="img/web.png" class="item">
+                            <img src="img/mysql.png" class="item">
+                            <img src="img/js.png" class="item">
+                            <img src="img/git.png" class="item">
+                            <img src="" class="item">
+                        </div>
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="p-wrapper" id="proj-wrap">
+            <div class="proj" id="projetos" >
+                <h1>Projetos</h1>
+                <br>
+                <div class="content2" >
+                    
+                    <div class= "topico2">
+                        <div class="titulo">
+                            <img alt="imagem" id="projImagem" src="img/download.jpg">
+                            <h2>Controle de estoque e agendamentos (ERP)</h2>
+                        </div>
+                        <div class="texto">
+                            
+                            <p>
+                                Sistema capaz de realizar agendamento de aulas e controle de mantimentos, desenvolvido para suprir necessidades do campus <br>
+                                IFRJ nilo peçanha. Projeto desenvolvido usando principalmente PHP e MySQL.
+                            </p>
+                        </div>
+                    </div>
+                    <div class= "topico2">
+                        <div class="titulo">
+                            <img alt="imagem" id="projImagem" src="img/download.jpg">
+                            <h2>Controle de estoque e agendamentos (ERP)</h2>
+                        </div>
+                        <div class="texto">
+                            
+                            <p>
+                                Sistema capaz de realizar agendamento de aulas e controle de mantimentos, desenvolvido para suprir necessidades do campus <br>
+                                IFRJ nilo peçanha. Projeto desenvolvido usando principalmente PHP e MySQL.
+                            </p>
+                        </div>
+                    </div>
+                    <div class= "topico2">
+                        <div class="titulo">
+                            <img alt="imagem" id="projImagem" src="img/download.jpg">
+                            <h2>Controle de estoque e agendamentos (ERP)</h2>
+                        </div>
+                        <div class="texto">
+                            
+                            <p>
+                                Sistema capaz de realizar agendamento de aulas e controle de mantimentos, desenvolvido para suprir necessidades do campus <br>
+                                IFRJ nilo peçanha. Projeto desenvolvido usando principalmente PHP e MySQL.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="contacts" id="contato">
+            <hr>
+            <div class="contactForm">
+                <h1>Contato</h1>
+                <div>
+                    <h3>Nome:</h3>
+                    <br>
+                    <input type="text">
+                    <br>
+                    <h3>Contato para retorno:</h3>
+                    <br>
+                    <input type="text">
+                    <br>
+                    <h3>Mensagem:</h3>
+                    <br>
+                    <textarea rows="4" cols="50"></textarea> 
+                    <br>
+                    <br>
+                    <button onclick="showPopup()">Enviar</button>
+                    <div class="popup" id="popup">Enviado!</div>
+                </div>
+                
+            </div>
+            <br>
+            <br>    
+            <div class="contactSocials">
+                <div>
+                    <img src="img/github.png" alt="github">
+                    <img src="img/linkedin.png" alt="linkedin">
+                    <img src="img/instagram.png" alt="instagram">
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <script>
+        function showPopup(){
+            var popup = document.getElementById("popup");
+            popup.classList.toggle("show");
+        }
+
+
+
+
+
+       
+
+
+        const controls = document.querySelectorAll('.control');
+        let currentItem = 1;
+        const items = document.querySelectorAll('.item')
+        const maxItems = items.length;
+        controls.forEach(control => {
+            control.addEventListener('click',()=>{
+                let isLeft = control.classList.contains('left-button');
+                console.log(isLeft,currentItem);
+
+                if (isLeft){
+                    currentItem-=1;
+                }
+                else{
+                    currentItem+=1;
+                }
+
+                if(currentItem>=maxItems-1){
+                    currentItem=1;
+                }
+                if(currentItem<1){
+                    currentItem = maxItems -2;
+                }
+
+                items.forEach(item => item.classList.remove('current-item'));
+
+                items[currentItem].scrollIntoView({
+                    inline:"center",
+                    behavior:"smooth",
+                    block: "nearest"
+                })
+                items[currentItem].classList.add('current-item')
+            })
+        })
+    </script>
+</body>
+</html>
