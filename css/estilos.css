@@ -19,6 +19,7 @@ h1{
 }
 hr{
     margin: 8vw;
+    margin-bottom: 0;
 }
 .menu{
     width: 3vw;
@@ -147,7 +148,8 @@ main{
     margin-left:15px;
 }
 .p-wrapper{
-    height: 50vh;
+    height: 60vh;
+    margin: 0 auto;
     
 }
 .proj{
