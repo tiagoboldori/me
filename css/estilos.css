@@ -19,6 +19,7 @@ h1{
 }
 hr{
     margin: 10vw;
+    margin-left: 0;
 }
 .menu{
     width: 3vw;
