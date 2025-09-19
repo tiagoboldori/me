@@ -18,7 +18,7 @@ h1{
     text-align: center;
 }
 hr{
-    margin: 8vw;
+    margin: 10vw;
 }
 .menu{
     width: 3vw;
@@ -91,7 +91,7 @@ hr{
 main{
     transition: 0.5s;
     float:right;
-    width: 95vw;
+    width: 85vw;
     z-index: 1;
 }
 
@@ -100,15 +100,18 @@ main{
 .content{
     padding-top:5vh;
     margin:50px;    
-    padding-left: 7vw;
+    padding-left: 1vw;
     padding-right: 10vw;
     display: flex;
     height: 60%;
 }
 .content2{
     margin:50px;
-    padding-left: 8vw;
+    padding-left: 0vw;
     display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    width:80vw;
 }
 
 
@@ -124,10 +127,11 @@ main{
 }
 
 .topico2{
+    padding-left: 80px;
     margin-top: 5px;
     max-height: 10vh;
-    max-width: 25vw;
-    min-width: 25vw;
+    max-width: 30vw;
+    min-width: 30vw;
 }
 .topico{
     margin-top: 5px;
@@ -147,9 +151,13 @@ main{
     margin-left:15px;
 }
 .p-wrapper{
-    height: 60vh;
+    height: 80vh;
     margin: 0 auto;
     
+}
+.p-wrapper h1{
+    margin: 0 auto;
+    margin-right: 100px;
 }
 .proj{
     padding-left: 0vw;
@@ -162,6 +170,7 @@ main{
 .proj div{
     margin: 2px;
 }
+
 
 .caroussel{
     margin: 0 auto;
@@ -327,11 +336,12 @@ main{
         margin: 0px;
     }
     .topico2{
-
         font-size: small;
         max-height:300vh;
         min-height: 25vh;
         width: 70vw;
+        margin-left: 0;
+        padding-left: 0;
     }
     .topico2 p {
         max-width: 80vw;
@@ -348,13 +358,16 @@ main{
         display: none;
     }
     .proj{
-        max-height: 100vh;
+        max-height: 110vh;
+        height: 70vh;
         overflow-y: scroll;
         background-color: rgba(165, 165, 165, 0.425);
         width: 80vw;
         margin:0 auto;
         border:#333333;
         border-width: 2px;
+        align-content: center;
+        margin-right: 100px;
     }
 
     .contactSocials{
