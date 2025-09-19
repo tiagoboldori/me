@@ -321,7 +321,8 @@ main{
     }
     .content{
         padding: 0px;
-        margin: 40px;
+        padding-right: 70px;
+        margin: 0 auto;
         width: 65vw;
         display: block;
 
