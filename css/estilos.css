@@ -147,13 +147,14 @@ main{
     margin-left:15px;
 }
 .p-wrapper{
-    display: flex;
-    height: 60vh;
+    height: 50vh;
     
 }
 .proj{
     padding-left: 0vw;
     margin-right: 6vw;
+    height: 45vh;
+    margin-bottom: 10px;
 }
 
 
@@ -305,6 +306,9 @@ main{
         margin:0px;
         padding: 0px;
     }
+    .tech-wrap{
+        display: none;
+    }
     .content{
         padding: 0px;
         margin: 40px;
@@ -351,6 +355,7 @@ main{
         border:#333333;
         border-width: 2px;
     }
+
     .contactSocials{
         display: inline-flex;
         margin-top: 10vh;
